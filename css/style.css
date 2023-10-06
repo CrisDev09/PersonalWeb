@@ -1,0 +1,340 @@
+/* ..................
+estilos generales  
+...................*/
+:root {
+    --primary-color: #18167a;
+    --white-color: #ffffff;
+    --shadow-100: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-300: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --shadow-blue: 0 5px 15px rgba(24, 22, 122, 0.2);
+    --black-900: #000000;
+    --black-400: #555555;
+    --black-300: #7c7c7c;
+    --black-100: #f7f7f7;
+    --black-000: #ffffff;
+    --black--100: rgba(0, 0, 0, 0.05);
+}
+
+.btn-1 {
+    background-color: var(--primary-color);
+    padding: 8px 20px;
+    border: none;
+    border-radius: 30px;
+    color: var(--white-color);
+    font-size: 16px;
+    transition: all 0, 5s ease;
+    box-shadow: var(--shadow-100);
+}
+
+.btn-1:hover {
+    color: var(--white-color);
+    box-shadow: var(--shadow-300) !important;
+}
+
+.btn-1:focus {
+    color: var(--white-color);
+    box-shadow: var(--shadow-300) !important;
+}
+
+.container-tech .tech-item {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    color: var(--black-400);
+    font-size: 14px;
+    padding: 0px 8px;
+    border: 1px solid var(--black-400);
+    box-shadow: var(--shadow-100);
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    top: 45%;
+    left: 18%;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+.section-title h2 span {
+    color: var(--primary-color);
+}
+
+/* ...............-..........
+estilos para el menu 
+..............................*/
+.menu {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+
+}
+
+.navbar-toggler {
+    box-shadow: none !important;
+    border: none;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--primary-color);
+    position: relative;
+    padding: 0;
+}
+
+.navbar .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--primary-color);
+    transition: all .3s;
+}
+
+.navbar .navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.navbar .navbar-brand {
+    width: 150px;
+}
+
+
+/* ---------- estilos para el contenido de la pagina ------------ */
+main {
+    margin-top: 60px;
+}
+
+/*.........................................
+ estilos para la seccion de encabezado 
+ ..........................................*/
+.header-home {
+    background-image: url(../img/bg-home-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.header-home h1 {
+    font-size: 3.3rem;
+}
+
+.header-home h1 span {
+    color: var(--primary-color);
+}
+
+.home-img {
+    position: relative;
+}
+
+.home-img img {
+    position: absolute;
+    max-width: 700px;
+    width: 700px;
+    top: 0;
+    left: 0;
+}
+
+
+/*.........................................
+ estilos para la seccion de acerca
+ ..........................................*/
+.section-about {
+    background-color: var(--black-100);
+}
+
+.section-about h2 {
+    font-size: 3.3rem;
+}
+
+.section-about h2 span {
+    color: var(--primary-color);
+}
+
+
+
+/*.........................................
+ estilos para la seccion habilidades
+ ..........................................*/
+.section-skills .box-item {
+    flex: 0 0 20%;
+    margin: 20px 10px;
+    box-shadow: var(--shadow-blue);
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+}
+.section-skills .box-item:hover {
+    flex: 0 0 20%;
+    margin: 20px 10px;
+    box-shadow: var(--shadow-300);
+    display: flex;
+    align-items: center;
+}
+
+
+.section-skills .box-item .icon{
+    margin-right: 10px;
+}
+
+.section-skills .box-item .icon i {
+    font-size: 4rem;
+}
+
+/*.........................................
+ estilos para la seccion proyectos
+ ..........................................*/
+.section-project {
+    background-color: var(--black-100);
+}
+
+.section-project .card {
+    margin: 0 10px;
+    border: none;
+    box-shadow: var(--shadow-300);
+    margin-bottom: 30px;
+    transform: scale(1);
+    transition: all .4 ease;
+}
+.section-project .card:hover{
+    transform: scale(1.1);
+}
+
+/*.........................................
+ estilos para la seccion formulario
+ ..........................................*/
+
+.section-form form {
+    box-shadow: var(--shadow-300);
+    padding: 20px;
+}
+
+.section-form form .form-control,
+.section-form form .form-control:active,
+.section-form form .form-control:focus {
+    box-shadow: none;
+}
+.section-form form .form-control:focus {
+    border-color: var(--primary-color);
+}
+
+.section-form form .form-control::placeholder {
+    color: var(--black-300);
+}
+/*.........................................
+ estilos para la seccion del footer/pie
+ ..........................................*/
+footer {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+}
+
+footer .box-icon{
+    width: 50px;
+}
+footer .box-icon i {
+    color: var(--white-color);
+    font-size: 30px;
+}
+
+footer p{
+    margin-bottom: 0px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+
+@media (max-width: 992px) {
+    .header-home h1 {
+        text-align: center;
+    }
+
+    .header-home p {
+        text-align: center;
+    }
+
+    .home-btn {
+        text-align: center;
+    }
+
+    .home-btn .btn {
+        font-size: 14px;
+    }
+    .section-about h2 {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .section-about p {
+        text-align: center;
+    }
+    .container-tech{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .section-padding {
+        padding: 70px 0;
+    }
+    .section-title {
+        margin-bottom: 50px;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    .header-home h1 {
+        font-size: 2rem;
+    }
+
+    .header-home p {
+        font-size: 15px;
+    }
+
+    .home-btn {
+        font-size: .8rem;
+    }
+    .section-about h2 {
+        font-size: 2rem;
+    }
+    .section-skills .box-item {
+        flex: 0 0 90%;
+        margin: 0 10px 20px 10px;
+    }
+    .section-skills .box-item .icon i {
+        font-size: 3rem;
+    }
+}
